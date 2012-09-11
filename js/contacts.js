@@ -12,7 +12,8 @@ $(document).ready(function() {
     }
     // shows a single contact
     function addOne(name, number) {
-        var contact_html = "";
+        var template = Handlebars.templates.contact;
+        var contact_html = template({name: name, number: number});
         $("#contacts").prepend(contact_html);
     }
     // show all contacts
