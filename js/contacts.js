@@ -12,6 +12,8 @@ $(document).ready(function() {
     }
     // shows a single contact
     function addOne(name, number) {
+        var contact_html = "";
+        $("#contacts").prepend(contact_html);
     }
     // show all contacts
     function render() {
