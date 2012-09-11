@@ -7,3 +7,7 @@
 #number {
     width: 170px;
 }
+#contacts {
+    max-height: 200px;
+    overflow: scroll;
+}
