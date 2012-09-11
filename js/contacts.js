@@ -15,6 +15,7 @@ $(document).ready(function() {
         var template = Handlebars.templates.contact;
         var contact_html = template({name: name, number: number});
         $("#contacts").prepend(contact_html);
+        $(".text-form").hide();
     }
     // show all contacts
     function render() {

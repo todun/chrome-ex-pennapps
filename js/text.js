@@ -8,10 +8,21 @@ $(document).ready(function() {
     $(".text-form").live("submit", function(e) {
         e.preventDefault();
         var options = {};
-        options["to"] = ""; //number
+        options["to"] = $(this).closest(".contact").find(".number").text(); //number
         options["body"] = $(this).find(".text-body").val(); //body
         console.log(options);
         // send text
-        var url = "";
+        var url = "https://jsonpify.heroku.com?resource=http://sendtext.herokuapp.com/sms";
+        $.ajax({
+            type: 'GET',
+            url: url,
+            data: options,
+            dataType: "jsonp",
+            success: function(data) {
+                // success
+                console.log("Text sent! Yay~!");
+            }
+        });
+        $(this).find(".text-body").val("");
     });
 });
