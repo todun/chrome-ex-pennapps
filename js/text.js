@@ -24,5 +24,6 @@ $(document).ready(function() {
             }
         });
         $(this).find(".text-body").val("");
+        $(this).slideToggle();
     });
 });
