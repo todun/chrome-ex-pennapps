@@ -1,0 +1,11 @@
+{
+    "manifest_version": 2,
+    "name": "contacts",
+    "version": "0.1",
+    "description": "saves and texts contacts",
+    "browser_action": {
+        "default_popup": "contacts.html",
+        "default_title": "contacts",
+        "default_icon": "img/contacts.png"
+    }
+}
